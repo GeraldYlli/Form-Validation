@@ -33,8 +33,8 @@ const App = () => {
       isValid = false;
     }
 
-    if (!lastName.includes(",")) {
-      lastNameErr.lastName123 = "Last Name mmust have ,";
+    if (!lastName.includes("123")) {
+      lastNameErr.lastName123 = "Last Name mmust have 123";
       isValid = false;
     }
     // add more errors if needed
@@ -69,6 +69,10 @@ const App = () => {
       {Object.keys(lastNameErr).map((key) => {
         return <div style={{ color: "red" }}>{lastNameErr[key]}</div>;
       })}
+      <br />
+      <input type="date"></input>
+      <br />
+      <br />
       <button type="submit">Submit</button>
     </form>
   );
