@@ -37,6 +37,7 @@ const App = () => {
       lastNameErr.lastName123 = "Last Name mmust have ,";
       isValid = false;
     }
+    // add more errors if needed
 
     setFirstNameErr(firstNameErr);
     setLastNameErr(lastNameErr);
