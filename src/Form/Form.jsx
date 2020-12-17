@@ -11,6 +11,7 @@ const Form = () => {
     website: "",
     city: ""
   };
+
   const [formValues, setFormValues] = useState(initialValues);
   const [formError, setFormError] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -69,6 +70,7 @@ const Form = () => {
     }
   });
 
+  //JSX
   return (
     <div className="container">
       <h1>Form Validation Test</h1>
