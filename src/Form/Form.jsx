@@ -11,7 +11,6 @@ const Form = () => {
     website: "",
     city: ""
   };
-
   const [formValues, setFormValues] = useState(initialValues);
   const [formError, setFormError] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -19,7 +18,6 @@ const Form = () => {
   const submit = () => {
     console.log(formValues);
   };
-
   //input change handler
   const handleChange = (e) => {
     const { name, value } = e.target;
