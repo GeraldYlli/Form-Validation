@@ -71,12 +71,12 @@ const Form = () => {
   //JSX
   return (
     <div className="container">
-      <button className="al" type="button">
+      {/* <button className="al" type="button">
         Al
       </button>
       <button className="en" type="button">
         En
-      </button>
+      </button> */}
       <h1>Form Validation Test</h1>
       {Object.keys(formError).length === 0 && isSubmitting && (
         <span className="success-msg">Form submitted successfully</span>
