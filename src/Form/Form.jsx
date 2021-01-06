@@ -37,7 +37,7 @@ const Form = () => {
     let errors = {};
 
     const emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-    const businessUnitCodeRegex = /[a-z]{2}[0-9]{3}[a-z]{2}[0-9]{3}/;
+    // const businessUnitCodeRegex = /[a-z]{2}[0-9]{3}[a-z]{2}[0-9]{3}/;
 
     if (!emailRegex.test(values.email) && values.email) {
       errors.email = "Invalid email format";
@@ -45,8 +45,6 @@ const Form = () => {
 
     if (!values.businessUnitCode) {
       errors.businessUnitCode = "Cannot be blank";
-    } else if (!businessUnitCodeRegex.test(values.businessUnitCode)) {
-      errors.businessUnitCode = "Invalid Code format";
     }
 
     if (!values.Name) {
@@ -73,6 +71,12 @@ const Form = () => {
   //JSX
   return (
     <div className="container">
+      <button className="al" type="button">
+        Al
+      </button>
+      <button className="en" type="button">
+        En
+      </button>
       <h1>Form Validation Test</h1>
       {Object.keys(formError).length === 0 && isSubmitting && (
         <span className="success-msg">Form submitted successfully</span>
@@ -142,7 +146,7 @@ const Form = () => {
         <div className="form-row">
           <label htmlFor="password">Users</label>
           <input
-            type="number"
+            type="text"
             name="users"
             id="users"
             value={formValues.users}
